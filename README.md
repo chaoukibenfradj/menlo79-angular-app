@@ -1,27 +1,24 @@
-# Menlo79App
+# Menlo79-Angular-App
+An Angular App for Menlo79.
+The app consists of a search engine for books. 
+The user have a main screen where he can search for books and he could also check the book details by clicking on the book item on the list.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+## Architecture
 
-## Development server
+- [Angular v14](https://angular.io/) For the front-end part.
+- [Json Server](https://angular.io/) Fake a REST API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Setup Steps
+1. Please make sure that you have the latest LTS Node.js version (currently [Node.js 16.15](https://nodejs.org/en/download/)).
+2. Clone the repository
+3. `cd menlo79-app`
+4. `npm install`
 
-## Code scaffolding
+## Run the project
+1. To run the project you will need to run `json-server` first to serve the REST endpoints for the frontend via `npm run json:server`,
+2. Then run in an other terminal window: `npm run start` to start the app. 
+3. By default, Angular serves the app on: `http://localhost:4200/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Run Unit Test
+To run the Unit Test please run: `npm run test`.
+The Unit Tests where written using Jasmine and Karma.
