@@ -1,0 +1,12 @@
+<main class="list-books">
+    <section class="list-books__search-input">
+        <label for="search-input" class="list-books__search-input__label">Search</label>
+        <input type="text" id="search-input" placeholder="Let us help you..." class="list-books__search-input__text-input"
+            [formControl]="searchInputFormControl" />
+    </section>
+    <section class="list-books__book-result">
+        <ng-container *ngIf="books$ | async as books">
+            <app-books-container [books]="books"></app-books-container>
+        </ng-container>
+    </section>
+</main>
