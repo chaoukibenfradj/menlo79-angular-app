@@ -1,0 +1,14 @@
+<div class="books-container-header">
+    <span>Searchable List</span>
+    <span>{{books?.length}} found</span>
+</div>
+<div class="books-container-body">
+    <ng-container *ngIf="books.length>0; else noBook">
+        <app-book-item class="books-container__book-item" *ngFor="let book of books" [book]="book" [routerLink]="'details/'+ book.isbn"></app-book-item>
+    </ng-container>
+    <ng-template #noBook>
+        <div class="books-container__not-found">
+            Sorry we didn't find it 🙁
+        </div>
+    </ng-template>
+</div>
