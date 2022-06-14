@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <button routerLink="/">🔙 Go Back</button>
+</nav>
+<ng-container *ngIf="(bookDetails$ | async) as book">
+    <main class="book-details">
+        <img [src]="book.thumbnailUrl" class="book-details__thumbnail" />
+        <div class="book-details__info">
+            <span class="book-details__title">{{book.title}}</span>
+            <span class="book-details__isbn">ISBN: {{book.isbn}}</span>
+            <span class="book-details__page-count">Pages: {{book.pageCount}}</span>
+            <span class="book-details__page-count">Published on: {{book.publishedDate.$date | date}}</span>
+            <span class="book-details__status">Status: {{book.status}}</span>
+            <span class="book-details__authors">Authors: {{book.authors}}</span>
+            <span class="book-details__categories">Categories: {{book.categories}}</span>
+            <span class="book-details__description">Description: {{book.shortDescription}}</span>
+        </div>
+    </main>
+</ng-container>
