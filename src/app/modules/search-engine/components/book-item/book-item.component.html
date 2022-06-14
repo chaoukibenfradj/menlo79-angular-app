@@ -1,0 +1,8 @@
+<div class="book-item">
+    <img [src]="book?.thumbnailUrl" [alt]="book?.title" role="img" class="book-item__thumbnail">
+    <div class="book-item__info">
+        <span class="book-item__info__title">{{book?.title}}</span>
+        <span class="book-item__info__isbn">ISBN: {{book?.isbn}}</span>
+        <span class="book-item__info__publication-date">Published on: {{book?.publishedDate?.$date | date}} </span>
+    </div>
+</div>

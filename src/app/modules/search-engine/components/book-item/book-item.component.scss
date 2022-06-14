@@ -1,0 +1,26 @@
+.book-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .book-item__thumbnail {
+        height: 72px;
+        object-fit: cover;
+    }
+
+    .book-item__info {
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        .book-item__info__title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .book-item__info__isbn{
+            color: var(--neutral-40);
+        }
+        .book-item__info__publication-date{
+            color: var(--neutral-40);
+        }
+    }
+}
