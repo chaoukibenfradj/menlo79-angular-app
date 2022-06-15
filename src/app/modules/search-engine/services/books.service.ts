@@ -22,7 +22,7 @@ export class BooksService {
   }
   getBookDetails(isbn: string): Observable<Book> {
     const queryParams = new HttpParams()
-      .append('isbn', isbn ?? '');
+      .append('isbn', isbn);
     return this.httpClient.get<Book[]>(
       `${environment.SERVER_URL}/books`,
       {
