@@ -8,7 +8,7 @@ import { BooksService } from '../../services/books.service';
   templateUrl: './book-details.component.html',
   styleUrls: ['./book-details.component.scss']
 })
-export class BookDetailsComponent implements OnInit {
+export class BookDetailsComponent {
 
   bookDetails$ = this.activatedRoute.paramMap
   .pipe(
@@ -19,9 +19,5 @@ export class BookDetailsComponent implements OnInit {
   );
 
   constructor(private activatedRoute: ActivatedRoute, private booksService: BooksService) { }
-
-  ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe(val=>console.log(val));
-  }
 
 }
