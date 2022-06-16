@@ -1,9 +1,8 @@
-import { fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { BooksService } from './books.service';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
-import { Book } from '../models/book.model';
 
 describe('BooksService', () => {
   let service: BooksService;
@@ -48,10 +47,10 @@ describe('BooksService', () => {
     "categories": [
       "Java"
     ]
-  }]
+  }];
 
   beforeEach(() => {
-    httpSpy = jasmine.createSpyObj('HttpClient', ['get'])
+    httpSpy = jasmine.createSpyObj('HttpClient', ['get']);
 
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],

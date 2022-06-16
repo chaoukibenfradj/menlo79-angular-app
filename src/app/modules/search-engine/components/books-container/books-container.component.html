@@ -1,6 +1,6 @@
 <div class="books-container-header">
     <span>Searchable List</span>
-    <span>{{books?.length}} found</span>
+    <span class="books-container-header__result-found">{{books?.length}} found</span>
 </div>
 <div class="books-container-body">
     <ng-container *ngIf="books.length>0; else noBook">
