@@ -85,7 +85,7 @@ describe('ListBooksComponent', () => {
     });
   });
 
-  it('shoud generate books data', () => {
+  it('should generate books data', () => {
     bookServiceSpy.getBookList.and.returnValue(of(mockData));
     
     component.books$.subscribe(data => {
